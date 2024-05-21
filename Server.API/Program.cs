@@ -12,6 +12,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<GamesContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("GamesContext")));
 
+// Custom service dependency injection configuration
+DependencyInjectionConfiguration.ConfigureServices(builder.Services);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

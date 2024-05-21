@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Server.API.Models
@@ -9,7 +7,7 @@ namespace Server.API.Models
     public class FarmCell
     {
         public Guid Id { get; set; }
-        public Guid UserId { get; set; }
+        public User User { get; set; }
         public int Row { get; set; }
         public int Column { get; set; }
         public Item Item { get; set; }

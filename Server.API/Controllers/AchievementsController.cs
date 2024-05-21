@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Server.API.Models;
+using Server.API.Services;
 using Server.API.Utils;
 
 namespace Server.API.Controllers
@@ -9,18 +10,18 @@ namespace Server.API.Controllers
     [ApiController]
     public class AchievementsController : ControllerBase
     {
-        private readonly GamesContext context;
+        private readonly IAchievementService achievementService;
 
-        public AchievementsController(GamesContext context)
+        public AchievementsController(IAchievementService achievementService)
         {
-            this.context = context;
+            this.achievementService = achievementService;
         }
 
         // GET: api/Achievements
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Achievement>>> GetAchivements()
         {
-            return await context.Achievements.ToListAsync();
+            return await achievementService.GetAchievementsAsync();
         }
     }
 }

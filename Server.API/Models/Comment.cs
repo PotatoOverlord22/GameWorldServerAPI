@@ -1,10 +1,10 @@
 namespace Server.API.Models
 {
-    public class Comment(Guid id, Guid posterUserId, string commentMessage, DateTime creationTime)
+    public class Comment
     {
-        public Guid Id { get; set; } = id;
-        public Guid PosterUserId { get; set; } = posterUserId;
-        public string CommentMessage { get; set; } = commentMessage;
-        public DateTime CreationTime { get; set; } = creationTime;
+        public Guid Id { get; set; }
+        public User Poster { get; set; }
+        public string CommentMessage { get; set; }
+        public DateTime CreationTime { get; set; }
     }
 }

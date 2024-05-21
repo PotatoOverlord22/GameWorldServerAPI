@@ -2,17 +2,15 @@ namespace Server.API.Models
 {
     public class Font
     {
-        private int fontID;
+        private Guid fontID;
         private string fontName;
         private int fontPrice;
         private string fontType;
-
-        private const int DEFAULT_FONT_ID = 0;
         private const string DEFAULT_FONT_NAME = "";
         private const int DEFAULT_FONT_PRICE = 0;
         private const string DEFAULT_FONT_TYPE = "";
 
-        public Font(int fontID = DEFAULT_FONT_ID, string fontName = DEFAULT_FONT_NAME, int fontPrice = DEFAULT_FONT_PRICE, string fontType = DEFAULT_FONT_TYPE)
+        public Font(Guid fontID = new Guid(), string fontName = DEFAULT_FONT_NAME, int fontPrice = DEFAULT_FONT_PRICE, string fontType = DEFAULT_FONT_TYPE)
         {
             this.fontID = fontID;
             this.fontName = fontName;
@@ -20,7 +18,7 @@ namespace Server.API.Models
             this.fontType = fontType;
         }
 
-        public int FontID
+        public Guid FontID
         {
             get { return fontID; }
             set { fontID = value; }

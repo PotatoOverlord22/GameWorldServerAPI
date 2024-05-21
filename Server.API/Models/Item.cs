@@ -4,9 +4,9 @@ namespace Server.API.Models
     {
         public Guid Id { get; set; }
         public ItemType ItemType { get; set; }
-        public Guid ResourceToPlaceId { get; set; }
-        public Guid ResourceToInteractId { get; set; }
-        public Guid? ResourceToDestroyId { get; set; } // Nullable.
+        public Resource? ResourceToPlace { get; set; }
+        public Resource? ResourceToInteract { get; set; }
+        public Resource? ResourceToDestroyId { get; set; } // Nullable.
     }
 
     public enum ItemType

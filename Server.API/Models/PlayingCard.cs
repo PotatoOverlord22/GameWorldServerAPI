@@ -2,7 +2,7 @@ namespace Server.API.Models
 {
     public class PlayingCard
     {
-        private int id;
+        private Guid id;
         private string value;
         private string suit;
 
@@ -42,6 +42,6 @@ namespace Server.API.Models
             return value + suit;
         }
 
-        public int Id { get => id; set => id = value; }
+        public Guid Id { get => id; set => id = value; }
     }
 }

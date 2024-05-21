@@ -2,30 +2,29 @@ namespace Server.API.Models
 {
     public class Table
     {
-        private int tableID;
-        private string tableName;
-        private int tableBuyIn;
-        private int tablePlayerLimit;
-
-        public int TableID
+        public Table(Guid tableID, string tableName, int tableBuyIn, int tablePlayerLimit)
         {
-            get { return tableID; }
-            set { tableID = value; }
+            this.TableID = tableID;
+            this.TableName = tableName;
+            this.TableBuyIn = tableBuyIn;
+            this.TablePlayerLimit = tablePlayerLimit;
+        }
+
+        public Guid TableID
+        {
+            get; set;
         }
         public string TableName
         {
-            get { return tableName; }
-            set { tableName = value; }
+            get; set;
         }
         public int TableBuyIn
         {
-            get { return tableBuyIn; }
-            set { tableBuyIn = value; }
+            get; set;
         }
         public int TablePlayerLimit
         {
-            get { return tablePlayerLimit; }
-            set { tablePlayerLimit = value; }
+            get; set;
         }
     }
 }
