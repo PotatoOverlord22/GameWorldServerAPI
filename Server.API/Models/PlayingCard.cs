@@ -2,6 +2,7 @@ namespace Server.API.Models
 {
     public class PlayingCard
     {
+        private int id;
         private string value;
         private string suit;
 
@@ -26,12 +27,6 @@ namespace Server.API.Models
         public const string SPADE_SYMBOL = "S";
         public const string CLUB_SYMBOL = "C";
 
-        public PlayingCard(string value, string suit)
-        {
-            this.value = value;
-            this.suit = suit;
-        }
-
         public string Value
         {
             get { return value; }
@@ -46,5 +41,7 @@ namespace Server.API.Models
         {
             return value + suit;
         }
+
+        public int Id { get => id; set => id = value; }
     }
 }
