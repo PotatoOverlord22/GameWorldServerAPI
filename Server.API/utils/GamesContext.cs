@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Server.API.Models;
-namespace Server.API.utils
+namespace Server.API.Utils
 {
     public class GamesContext : DbContext
     {
         public GamesContext(DbContextOptions<GamesContext> options) : base(options)
         {
-        }    
+        }
 
         public DbSet<InventoryResource> InventoryResources { get; set; }
         public DbSet<Achievement> Achievements { get; set; }
@@ -24,6 +24,5 @@ namespace Server.API.utils
         public DbSet<Table> Tables { get; set; }
         public DbSet<Title> Titles { get; set; }
         public DbSet<Trade> Trades { get; set; }
-
     }
 }
