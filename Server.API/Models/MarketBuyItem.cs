@@ -5,6 +5,5 @@ namespace Server.API.Models
         public Guid Id { get; set; }
         public Guid ItemId { get; set; }
         public int BuyPrice { get; set; }
-
     }
 }

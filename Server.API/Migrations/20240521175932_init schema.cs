@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Server.API.Migrations
 {
     /// <inheritdoc />
-    public partial class initschema : Migration
+    public partial class Initschema : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
