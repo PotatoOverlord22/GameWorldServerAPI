@@ -7,15 +7,6 @@ namespace Server.API.Models
         public Guid ResourceToPlaceId { get; set; }
         public Guid ResourceToInteractId { get; set; }
         public Guid? ResourceToDestroyId { get; set; } // Nullable.
-
-        public Item(Guid id, ItemType itemType, Guid requiredResourceId, Guid interactResourceId, Guid? destroyResourceId)
-        {
-            Id = id;
-            ItemType = itemType;
-            ResourceToPlaceId = requiredResourceId;
-            ResourceToInteractId = interactResourceId;
-            ResourceToDestroyId = destroyResourceId;
-        }
     }
 
     public enum ItemType

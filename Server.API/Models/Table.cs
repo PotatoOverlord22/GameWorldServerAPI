@@ -7,18 +7,6 @@ namespace Server.API.Models
         private int tableBuyIn;
         private int tablePlayerLimit;
 
-        public Table()
-        {
-        }
-
-        public Table(int tableID, string tableName, int tableBuyIn, int tablePlayerLimit)
-        {
-            this.tableID = tableID;
-            this.tableName = tableName;
-            this.tableBuyIn = tableBuyIn;
-            this.tablePlayerLimit = tablePlayerLimit;
-        }
-
         public int TableID
         {
             get { return tableID; }
